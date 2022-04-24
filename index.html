@@ -2,23 +2,47 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Todo List App</title>
-    <link rel="stylesheet" href="mystyle.css">
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Todo List</title>
+  <link rel="stylesheet" href="css/font-awesome.min.css" />
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 
 <body>
-    <h1><span class="heading">TODO</span> List</h1>
-    <div class="input_div">
-        <input type="text" class="input" placeholder="Enter Task">
-        <button class="addButton"><i class="fas fa-plus"></i></button>
-    </div>
+  <section class="todo-outer">
+    <div class="container">
+      <div class="row justify-content-md-center">
+        <div class="col-sm-12 col-md-8">
+          <h1>Welcome To Todo List App</h1>
+          <div class="todo-inner">
+            <div class="form-row">
+              <div class="col-8 mr-sm-2">
+                <input type="text" class="form-control" placeholder="Enter your task" id="addtaskinput" />
+                <input type="hidden" id="saveindex">
+              </div>
+              <button type="button" class="btn btn-success mr-sm-2" id="addtaskbtn">
+                Add Task
+              </button>
+              <button type="button" class="btn btn-success mr-sm-2" id="savetaskbtn" style="display: none;">
+                Save Task
+              </button>
+              <button type="button" id="deleteallbtn" class="btn btn-danger">
+                Delete All
+              </button>
+            </div>
+            <div class="to-do-output">
+              <table class="table table-striped mt-3 mb-0" id="addedtasklist">
 
-    <div class="container"></div>
-    <script type="text/javascript" src="main.js"></script>
-    <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js"></script>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script src="js/main.js"></script>
 </body>
 
 </html>
